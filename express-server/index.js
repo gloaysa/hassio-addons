@@ -13,8 +13,13 @@ app.listen(port, () => {
 
 
 app.get('/gas-prices', async (req, res) => {
+    console.info(`/gas-prices endpoint reached with municipio as ${municipio}`)
     let responseCode = 0;
     const {municipio} = req.query;
+    if (!municipio) {
+        responseCode = 500;
+        res.json({responseCode})
+    }
     const { ListaEESSPrecio } = await fetch(`https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/EstacionesTerrestres/FiltroMunicipio/${municipio}`)
         .then((res) => {
             responseCode = res.status;
