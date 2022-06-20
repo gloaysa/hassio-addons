@@ -1,0 +1,14 @@
+{
+  "name": "express_server_hassio",
+  "version": "0.0.1",
+  "description": "Addons for Home Assistant by Guillermo Loaysa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Guillermo Loaysa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
