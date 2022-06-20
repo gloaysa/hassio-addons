@@ -13,9 +13,11 @@ app.listen(port, () => {
 
 
 app.get('/gas-prices', async (req, res) => {
-    console.info(`/gas-prices endpoint reached with municipio as ${municipio}`)
     let responseCode = 0;
     const {municipio} = req.query;
+
+    console.info(`/gas-prices endpoint reached with municipio as ${municipio}`)
+
     if (!municipio) {
         responseCode = 500;
         res.json({responseCode})
