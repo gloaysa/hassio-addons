@@ -1,6 +1,6 @@
 {
     "name": "express_server_hassio",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "slug": "express-server__hassio",
     "description": "An addon for Home Assistant running express server",
