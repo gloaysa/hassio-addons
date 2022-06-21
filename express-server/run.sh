@@ -14,7 +14,7 @@ echo Node Version
 node -v
 echo NPM version
 npm -v
-echo Running npm install
+echo Running npm install --production
 npm install
 echo Starting the server...
 npm run serve

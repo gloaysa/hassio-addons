@@ -11,8 +11,8 @@ RUN \
         npm
 
 # Copy data for add-on
-COPY run.sh /
 COPY server /
+COPY run.sh /
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
