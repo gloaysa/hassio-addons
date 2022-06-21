@@ -4,6 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 COPY package.json /server/
+COPY package-lock.json /server/
 
 RUN \
     apk add --no-cache \

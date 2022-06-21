@@ -15,7 +15,7 @@ node -v
 echo NPM version
 npm -v
 echo Running npm install
-npm ci --production
+npm ci
 echo Building...
 npm run build
 echo Starting the server...
