@@ -17,7 +17,7 @@ COPY server /server
 
 COPY run.sh /server/
 
-RUN cd /server
+WORKDIR /server
 
 RUN chmod a+x ./run.sh
 
