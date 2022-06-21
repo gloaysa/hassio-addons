@@ -14,8 +14,6 @@ echo Node Version
 node -v
 echo NPM version
 npm -v
-echo Installing typescript
-npm install -g typescript
 echo Running npm install
 npm install --production
 echo Building...
