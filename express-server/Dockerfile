@@ -5,6 +5,7 @@ ENV LANG C.UTF-8
 
 COPY package.json /server/
 COPY package-lock.json /server/
+COPY tsconfig.json /server/
 
 RUN \
     apk add --no-cache \
