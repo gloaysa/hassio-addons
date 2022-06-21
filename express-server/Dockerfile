@@ -10,6 +10,7 @@ RUN \
         nodejs \
         npm
 
+RUN npm install -g typescript
 # Copy data for add-on
 COPY server /
 COPY run.sh /
