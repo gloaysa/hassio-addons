@@ -1,9 +1,9 @@
 {
-    "name": "express_server_hassio",
-    "version": "1.1.5",
+    "name": "Express Server",
+    "version": "1.0.0",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "slug": "express",
-    "description": "An addon for Home Assistant running express server",
+    "description": "An addon for Home Assistant running an express server",
     "url": "https://github.com/gloaysa/hassio-addons/tree/master/express-server",
     "startup": "application",
     "boot": "auto",
