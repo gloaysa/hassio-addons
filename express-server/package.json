@@ -6,8 +6,8 @@
   "scripts": {
     "start": "concurrently \"npm run build:watch\" \"npm run serve:watch\"",
     "build": "tsc",
-    "build:watch": "tsc --watch",
     "serve": "node dist/index.js",
+    "build:watch": "tsc --watch",
     "serve:watch": "nodemon --watch dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
