@@ -11,9 +11,9 @@ CONFIG_PATH=/data/options.json
 CONNECTION_STRING="$(jq --raw-output '.connectionString' $CONFIG_PATH)"
 
 echo Node Version
-echo ${node -v}
+node -v
 echo NPM version
-echo ${npm -v}
+npm -v
 echo Running npm install
 npm install
 echo Starting the server...
