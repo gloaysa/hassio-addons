@@ -13,10 +13,5 @@
     },
     "ports_description": {
         "3001/tcp": "Express server port"
-    },
-    "map": [
-      "share:rw"
-    ],
-    "options": {},
-    "schema": {}
+    }
   }
