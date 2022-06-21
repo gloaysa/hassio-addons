@@ -10,7 +10,6 @@ RUN \
         nodejs \
         npm
 
-echo BUILD_FROM
 # Copy data for add-on
 COPY run.sh /
 COPY server /
