@@ -8,7 +8,7 @@ ADD package.json /
 RUN \
     apk add --no-cache \
         nodejs \
-        npm \
+        npm
 
 RUN npm install -g typescript
 
