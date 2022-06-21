@@ -1,9 +1,9 @@
 ARG BUILD_FROM
-FROM alpine
+FROM BUILD_FROM
 
 ENV LANG C.UTF-8
 
-ADD package.json /
+COPY package.json /server/
 
 RUN \
     apk add --no-cache \
@@ -15,8 +15,10 @@ RUN npm install -g typescript
 # Copy data for add-on
 COPY server /server
 
-COPY run.sh /
+COPY run.sh /server/
 
-RUN chmod a+x /run.sh
+RUN ls /server
 
-CMD [ "/run.sh" ]
+RUN chmod a+x /server/run.sh
+
+CMD [ "/server/run.sh" ]
