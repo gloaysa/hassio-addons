@@ -1,4 +1,5 @@
 {
   "name": "Home Assistant addons by Guillermo Loaysa",
-  "url": "https://github.com/gloaysa/hassio-addons"
+  "url": "https://github.com/gloaysa/hassio-addons",
+  "maintainer": "Guillermo Loaysa <@gloaysa>"
 }
