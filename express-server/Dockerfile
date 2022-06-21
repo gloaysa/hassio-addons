@@ -17,8 +17,8 @@ COPY server /server
 
 COPY run.sh /server/
 
-RUN ls /server
+RUN cd /server
 
-RUN chmod a+x /server/run.sh
+RUN chmod a+x ./run.sh
 
-CMD [ "/server/run.sh" ]
+CMD [ "./run.sh" ]
