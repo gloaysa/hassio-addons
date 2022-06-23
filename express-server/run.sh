@@ -14,6 +14,8 @@ echo Node Version
 node -v
 echo NPM version
 npm -v
+echo TypeScript version
+tsc -v
 echo Running npm install
 npm ci
 echo Building...
