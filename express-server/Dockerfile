@@ -8,7 +8,7 @@ RUN \
         nodejs \
         npm
 
-RUN npm install -g typescript:latest
+RUN npm install -g typescript
 
 # Copy data for add-on
 COPY package.json /addon/
