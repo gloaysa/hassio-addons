@@ -2,7 +2,7 @@ import "./App.css";
 import {useEntites} from './hooks/use-connection.hook';
 
 function App() {
-    const hassUrl = 'http://homeassistant.local:8123';
+    const hassUrl = 'http://supervisor/core';
     const mediaPlayers = useEntites();
 
     return (

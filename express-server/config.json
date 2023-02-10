@@ -7,18 +7,13 @@
     "url": "https://github.com/gloaysa/hassio-addons/tree/master/express-server",
     "startup": "application",
     "boot": "auto",
+    "homeassistant_api": true,
     "init": false,
-    "ingress": true,
-    "ingress_port": "3001",
-    "ingress_entry": "web",
+    "webui": "http://[HOST]:[PORT:3001]/web",
     "ports": {
         "3001/tcp": 3001
     },
     "ports_description": {
         "3001/tcp": "Express server port"
-    },
-    "options": {
-        "hassUrl": "http://homeassistant.local:8123",
-        "token": null
     }
   }

@@ -9,8 +9,8 @@ import {
 
 export const useConnection = (): Connection | undefined => {
     const [connection, setConnection] = useState<Connection | undefined>();
-    const hassUrl = 'http://homeassistant.local:8123';
-    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjYTEwOWIzMThmZTM0Y2Q5OGQ4YjJlMmMyZjgxOGJlNyIsImlhdCI6MTY3NjAzMzExMiwiZXhwIjoxOTkxMzkzMTEyfQ.xWTTmgNBIlbxyOvey2YG-4NhVScU-T51b1avKRDeBQ8';
+    const hassUrl = 'ws://supervisor/core/websocket';
+    const token = 'SUPERVISOR_TOKEN';
     const connect = useCallback(async () => {
         const auth = createLongLivedTokenAuth(hassUrl, token);
         const conn = await createConnection({auth});
