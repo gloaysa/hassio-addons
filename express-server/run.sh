@@ -3,15 +3,6 @@ set -e
 
 CONFIG="./config.txt"
 
-# Create main config
-HASSURL=$(bashio::config 'hassUrl')
-TOKEN=$(bashio::config 'token')
-
-{
-    echo "hassUrl \"${HASSURL}\";"
-    echo "token ${TOKEN};";
-} > "${CONFIG}"
-
 if [ -n "$TZ" ] && [ -f /etc/localtime ]; then
      if [ -f /usr/share/zoneinfo/"$TZ" ]; then
          echo "Timezone set from $(cat /etc/timezone) to $TZ"
