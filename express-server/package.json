@@ -1,6 +1,6 @@
 {
   "name": "express_server_hassio",
-  "version": "0.0.1",
+  "version": "2.0.1",
   "description": "Addons for Home Assistant by Guillermo Loaysa",
   "main": "build/index.js",
   "private": true,

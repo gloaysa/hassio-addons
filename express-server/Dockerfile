@@ -12,9 +12,8 @@ RUN npm install -g typescript
 
 # Copy data for add-on
 COPY package.json /server/
-COPY package-lock.json /server/
-COPY tsconfig.json /server/
 COPY server /server/src
+COPY client /server/src
 COPY run.sh /server/
 
 WORKDIR /server
