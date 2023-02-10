@@ -14,7 +14,7 @@ RUN npm install -g typescript
 COPY package.json /server/
 COPY package-lock.json /server/
 COPY tsconfig.json /server/
-COPY src /server/src
+COPY server /server/src
 COPY run.sh /server/
 
 WORKDIR /server

@@ -1,6 +1,6 @@
 import {Router} from 'express';
-import {CarburanteService} from '../../services/carburante/carburante.service';
-import {Station} from '../../services/carburante/carburante.interface';
+import {CarburanteService} from '../../../services/carburante/carburante.service';
+import {Station} from '../../../services/carburante/carburante.interface';
 import {CheapestStationMapped, StationMapped} from './station-mapped.interface';
 
 const gasStationsRouter = Router();
@@ -22,6 +22,10 @@ function mapGasStation(stations: Station[], priceCondition: string): StationMapp
     .sort((a, b) => a.precio - b.precio)
 }
 
+gasStationsRouter.get('/', (req, res, next): void => {
+    res.send("You have reached gasStationsRouter!");
+});
+
 gasStationsRouter.get('/cheapest-three', async (req, res) => {
   let responseCode = 0;
   const {municipio, type } = req.query;
@@ -33,7 +37,10 @@ gasStationsRouter.get('/cheapest-three', async (req, res) => {
 
   if (!municipio || typeof municipio !== 'string') {
     responseCode = 500;
-    res.json({responseCode})
+    console.log('hola');
+    res.json({responseCode, message: 'Please, provide a municipio'});
+    res.status(500);
+    res.end();
     return;
   }
 

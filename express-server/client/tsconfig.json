@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
+    "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es5",
+    "target": "es6",
     "resolveJsonModule": true,
     "noImplicitAny": true,
     "moduleResolution": "node",
     "sourceMap": true,
-    "outDir": "dist",
+    "outDir": "build",
     "baseUrl": ".",
     "paths": {
       "*": [
@@ -16,6 +16,10 @@
     }
   },
   "include": [
-    "src/**/*"
+    "**/**/*.ts"
+  ],
+  "exclude": [
+    "src",
+    "build"
   ]
 }

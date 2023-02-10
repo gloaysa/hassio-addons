@@ -14,11 +14,16 @@ export class CarburanteService {
   }
 
   municipalGasStations(municipio: string): Promise<StationByProvince> {
-    const url = `${this.apiUrl}/EstacionesTerrestres/FiltroMunicipio/${municipio}`;
-    console.info(`GET ${url}`)
-    return fetch(url).then((res: Response) => {
-      const response = res.json();
-      return response as unknown as StationByProvince;
-    });
+    try {
+      const url = `${this.apiUrl}/EstacionesTerrestres/FiltroMunicipio/${municipio}`;
+      console.info(`GET ${url}`)
+      return fetch(url).then((res: Response) => {
+        const response = res.json();
+        return response as unknown as StationByProvince;
+      });
+    } catch (e) {
+      console.error(e);
+    }
+
   }
 }
