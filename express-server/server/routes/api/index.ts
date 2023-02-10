@@ -11,6 +11,6 @@ apiRouter.get('/a', (req, res): void => {
     res.send("You have reached a");
 });
 
-apiRouter.use(gasStationsRouter);
+apiRouter.use('/gas-stations', gasStationsRouter);
 
 export default apiRouter;

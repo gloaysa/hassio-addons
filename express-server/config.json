@@ -1,6 +1,6 @@
 {
     "name": "Express Server",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "slug": "express",
     "description": "An addon for Home Assistant running an express server",
@@ -8,10 +8,17 @@
     "startup": "application",
     "boot": "auto",
     "init": false,
+    "ingress": true,
+    "ingress_port": "3001",
+    "ingress_entry": "/web",
     "ports": {
         "3001/tcp": 3001
     },
     "ports_description": {
         "3001/tcp": "Express server port"
+    },
+    "options": {
+        "hassUrl": "http://homeassistant.local:8123",
+        "token": null
     }
   }

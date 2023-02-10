@@ -1,4 +1,4 @@
-import {getStates, HassEntities, HassEntity} from 'home-assistant-js-websocket';
+import {getStates, HassEntity} from 'home-assistant-js-websocket';
 import {ConnectionService} from '../connection/connection.service';
 
 export class EntitiesService {

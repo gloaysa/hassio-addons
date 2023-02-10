@@ -37,7 +37,6 @@ gasStationsRouter.get('/cheapest-three', async (req, res) => {
 
   if (!municipio || typeof municipio !== 'string') {
     responseCode = 500;
-    console.log('hola');
     res.json({responseCode, message: 'Please, provide a municipio'});
     res.status(500);
     res.end();

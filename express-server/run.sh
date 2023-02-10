@@ -1,5 +1,17 @@
 #!/bin/bash
 set -e
+
+CONFIG="./config.txt"
+
+# Create main config
+HASSURL=$(bashio::config 'hassUrl')
+TOKEN=$(bashio::config 'token')
+
+{
+    echo "hassUrl \"${HASSURL}\";"
+    echo "token ${TOKEN};";
+} > "${CONFIG}"
+
 if [ -n "$TZ" ] && [ -f /etc/localtime ]; then
      if [ -f /usr/share/zoneinfo/"$TZ" ]; then
          echo "Timezone set from $(cat /etc/timezone) to $TZ"
@@ -18,7 +30,5 @@ echo TypeScript version
 tsc -v
 echo Running npm install
 npm ci
-echo Building...
-npm run build
-echo Starting the server...
+echo Building and Starting the server...
 npm run serve

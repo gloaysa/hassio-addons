@@ -1,25 +1,26 @@
 import "./App.css";
-import {EntitiesService} from './services/entities/entities.service';
-import {useCallback, useState} from 'react';
-import {HassEntity} from 'home-assistant-js-websocket';
+import {useEntites} from './hooks/use-connection.hook';
 
 function App() {
-    const entitiesService = EntitiesService.getInstance();
-    const [entities, setEntities] = useState<HassEntity[]>([]);
-    const getEntities = useCallback(() => {
-         setEntities(entitiesService.allEntities());
-    }, [entitiesService]);
+    const hassUrl = 'http://homeassistant.local:8123';
+    const mediaPlayers = useEntites();
 
-    console.log(entities);
+    return (
+        <div className="app" role="main">
+            <article className="app__article">
+                {
+                    !mediaPlayers?.length ?
+                        <>Loading...</> :
+                        <img
+                            className='app__album'
+                            src={`${hassUrl}${mediaPlayers[0]?.attributes.entity_picture}`}
+                            alt=""
+                        />
+                }
 
-  return (
-    <div className="App" role="main">
-      <article className="App-article">
-        <h3>Welcome</h3>
-          <button onClick={getEntities}>Get entities</button>
-      </article>
-    </div>
-  );
+            </article>
+        </div>
+    );
 }
 
 export default App;

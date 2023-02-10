@@ -27,8 +27,4 @@ export class ConnectionService {
         this.hassUrl = 'http://192.168.0.31:8123';
         this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjYTEwOWIzMThmZTM0Y2Q5OGQ4YjJlMmMyZjgxOGJlNyIsImlhdCI6MTY3NjAzMzExMiwiZXhwIjoxOTkxMzkzMTEyfQ.xWTTmgNBIlbxyOvey2YG-4NhVScU-T51b1avKRDeBQ8'
     }
-
-    private async establishConnection(hassUrl: string, token: string) {
-
-    }
 }

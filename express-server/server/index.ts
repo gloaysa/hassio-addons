@@ -2,7 +2,6 @@ import express from 'express';
 
 import * as path from 'path';
 import apiRouter from './routes/api';
-import gasStationsRouter from './routes/api/gas-stations/gas-stations.router';
 const app = express();
 const port = 3001;
 
@@ -11,7 +10,6 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api', apiRouter);
-app.use('/api/gas-stations', gasStationsRouter);
 
 app.use(express.static(path.resolve("./") + "/build"));
 
