@@ -12,6 +12,7 @@ RUN npm install -g typescript
 
 # Copy data for add-on
 COPY package.json /addon/
+COPY package-lock.json /addon/
 COPY build /addon/build
 COPY run.sh /addon/
 
