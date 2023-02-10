@@ -19,5 +19,7 @@ echo NPM version
 npm -v
 echo TypeScript version
 tsc -v
+echo Running npm install
+npm ci
 echo Starting the server...
 npm run serve
