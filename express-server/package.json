@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run start -ws --if-present",
     "build": "npm run build -ws --if-present",
-    "serve": "npm run build && node build/index.js"
+    "serve": "node build/index.js"
   },
   "author": "Guillermo Loaysa",
   "license": "ISC",

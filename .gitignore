@@ -34,9 +34,6 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
-build/Release
-
 # Dependency directories
 node_modules/
 jspm_packages/
@@ -100,44 +97,6 @@ dist
 # DynamoDB Local files
 .dynamodb/
 
-# TernJS port file
-.tern-port
-hassio-addon-example/app.js
-hassio-addon-example/config.json
-hassio-addon-example/Dockerfile
-hassio-addon-example/LICENSE
-hassio-addon-example/package.json
-hassio-addon-example/README.md
-hassio-addon-example/run.sh
-hassio-addon-grocy-api-wrapper/json/chores.json
-hassio-addon-grocy-api-wrapper/json/choreTrackInfo.json
-hassio-addon-grocy-api-wrapper/json/taskCategories.json
-hassio-addon-grocy-api-wrapper/json/tasks.json
-hassio-addon-grocy-api-wrapper/json/users.json
-hassio-addon-api-consumer/package-lock.json
-hassio-addon-api-consumer/caldavConsumer.js
-hassio-addon-api-consumer/consumers/caldavConsumer.js
-hassio-addon-api-consumer/consumers/testConsumer.js
-hassio-addon-api-consumer/consumers/grocyConsumer.js
-hassio-addon-api-consumer/consumers/irailConsumer.js
-hassio-addon-api-consumer/consumers/old_grocyConsumer.js
-hassio-addon-api-consumer/consumers/buienalarmConsumer.js
-hass-addon-calendar/package-lock.json
-hass-addon-calendar/package-lock.json
-testing/local-testing.js
-testing/package.json
-testing/service-account-key.json
-testing/package-lock.json
-testing/ics-to-json/readme.md
-testing/ics-to-json/package.json
-testing/ics-to-json/jest.config.js
-testing/ics-to-json/icsToJson.test.js
-testing/ics-to-json/icsToJson.js
-testing/ics-to-json/dist.js
-testing/ics-to-json/.travis.yml
-testing/allFutureEvents.json
-
-
 # IDE
 .idea
 
@@ -151,10 +110,6 @@ testing/allFutureEvents.json
 
 # testing
 /coverage
-
-# production
-/build
-build
 
 # misc
 .DS_Store
