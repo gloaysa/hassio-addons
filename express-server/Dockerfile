@@ -11,12 +11,13 @@ RUN \
 RUN npm install -g typescript
 
 # Copy data for add-on
-COPY package.json /server/
-COPY server /server/src
-COPY client /server/src
-COPY run.sh /server/
+COPY package.json /addon/
+COPY package-lock.json /addon/
+COPY server /addon/server/
+COPY client /addon/client/
+COPY run.sh /addon/
 
-WORKDIR /server
+WORKDIR /addon
 
 RUN chmod a+x ./run.sh
 
