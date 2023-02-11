@@ -1,5 +1,6 @@
 import {FunctionComponent} from 'react';
 import {useAppSelector} from '../../store/store';
+import './album-cover.component.css';
 
 interface IFunctionComponent {
 }
@@ -13,7 +14,7 @@ const AlbumCoverComponent: FunctionComponent<IFunctionComponent> = () => {
                 !currentAlbum ?
                     <>Loading...</> :
                     <img
-                        className='app__album'
+                        className='album-cover__cover'
                         src={`${hassUrl}${currentAlbum.entity_picture}`}
                         alt="album art"
                         loading="eager"

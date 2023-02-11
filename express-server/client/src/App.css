@@ -12,9 +12,3 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
-
-.app__album {
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
