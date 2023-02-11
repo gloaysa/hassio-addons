@@ -14,17 +14,24 @@ export class ConnectionService {
 
     private readonly hassUrl;
     private readonly token;
+    private connectionStarted = false;
 
-    async connection(): Promise<Connection> {
-        if (!this._connection) {
-            const auth = createLongLivedTokenAuth(this.hassUrl, this.token);
-            this._connection = await createConnection({auth});
+    constructor() {
+        this.hassUrl = 'http://homeassistant.local:8123';
+        this.token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjYTEwOWIzMThmZTM0Y2Q5OGQ4YjJlMmMyZjgxOGJlNyIsImlhdCI6MTY3NjAzMzExMiwiZXhwIjoxOTkxMzkzMTEyfQ.xWTTmgNBIlbxyOvey2YG-4NhVScU-T51b1avKRDeBQ8';
+    }
+
+    async startConnection(): Promise<Connection | undefined> {
+        if (this.connectionStarted) {
+            return this._connection;
         }
+        this.connectionStarted = true;
+        const auth = createLongLivedTokenAuth(this.hassUrl, this.token);
+        this._connection = await createConnection({auth});
         return this._connection;
     }
 
-    constructor() {
-        this.hassUrl = '';
-        this.token = ''
+    async connection(): Promise<Connection | undefined> {
+        return this._connection;
     }
 }

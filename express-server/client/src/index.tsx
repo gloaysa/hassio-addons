@@ -3,11 +3,22 @@ import {createRoot} from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Provider} from 'react-redux';
+import {store} from './store/store';
+import {ConnectionService} from './services/connection/connection.service';
+import {EntitiesService} from './services/entities/entities.service';
 
 const root = createRoot(document.getElementById('root'));
+
+const connectionService = ConnectionService.getInstance();
+connectionService.startConnection()
+    .then(() => EntitiesService.getInstance());
+
 root.render(
   <React.StrictMode>
+      <Provider store={store} >
     <App />
+      </Provider>
   </React.StrictMode>
 );
 

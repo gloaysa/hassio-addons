@@ -1,23 +1,13 @@
 import "./App.css";
-import {useEntites} from './hooks/use-connection.hook';
+import { FunctionComponent } from 'react';
+import AlbumCoverComponent from './components/album-cover/album-cover.component';
 
-function App() {
-    const hassUrl = 'http://homeassistant.local:8123';
-    const mediaPlayers = useEntites();
+const App: FunctionComponent = () => {
 
     return (
         <div className="app" role="main">
             <article className="app__article">
-                {
-                    !mediaPlayers?.length ?
-                        <>Loading...</> :
-                        <img
-                            className='app__album'
-                            src={`${hassUrl}${mediaPlayers[0]?.attributes.entity_picture}`}
-                            alt=""
-                        />
-                }
-
+                <AlbumCoverComponent />
             </article>
         </div>
     );
