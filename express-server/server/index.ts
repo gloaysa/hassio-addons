@@ -5,15 +5,11 @@ import apiRouter from './routes/api';
 const app = express();
 const port = 3001;
 
-app.get('/', (req, res) => {
-  res.send(`Hello World!`)
-})
-
 app.use('/api', apiRouter);
 
 app.use(express.static(path.resolve("./") + "/build"));
 
-app.get('/web', (req, res): void => {
+app.get('/', (req, res): void => {
   res.sendFile(path.resolve("./") + "/build/index.html");
 });
 

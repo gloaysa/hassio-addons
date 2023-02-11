@@ -1,6 +1,6 @@
 {
     "name": "Express Server",
-    "version": "2.0.11",
+    "version": "2.0.12",
     "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
     "slug": "express",
     "description": "An addon for Home Assistant running an express server",
@@ -8,8 +8,8 @@
     "startup": "application",
     "boot": "auto",
     "homeassistant_api": true,
-    "init": false,
-    "webui": "http://[HOST]:[PORT:3001]/web",
+    "init": true,
+    "webui": "http://[HOST]:[PORT:3001]/",
     "ports": {
         "3001/tcp": 3001
     },
